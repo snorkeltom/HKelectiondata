@@ -14,3 +14,7 @@ Hourly VT by PS 即顯示各年份全港各投票站每小時的投票數據
 Polling Station Info 即有最近兩年選舉各票站資料，例如票站地址及其經緯道，票站獲分派多少選民等等。
 
 VT by Age Group and Gender by PS 即是各年份各投票站己投票人士的年齡層分佈。
+
+Voter Registration by Group and Gender (xlsx) 即是各年選區各年齡層在2011年至2017年選民登記人數。(注意: 2011年-2014年及2015年-2017年選區劃界是有所不同)
+
+New Voter Registration by Group and Gender (xlsx) 即是各年選區各年齡層在2011年至2017年在該年選民新增登記人數。(注意: 2011年-2014年及2015年-2017年選區劃界是有所不同)
