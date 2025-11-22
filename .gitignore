@@ -1,0 +1,5 @@
+*.zip
+inspect_*.py
+temp_analysis/
+temp_zip*/
+temp_reextract/
