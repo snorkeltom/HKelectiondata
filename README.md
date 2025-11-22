@@ -1,20 +1,50 @@
-# HKelectiondata
-Hong Kong Election Data
+# HK Election Data / 香港選舉數據
 
-一個唔識用github 既人好似睇到人用github 可以方便share data 所以開咗個。
+This repository contains data related to Hong Kong elections, converted from PDF files (sourced from the Registration and Electoral Office) into machine-readable formats (CSV/Excel).
 
-基本上我依家就係將選舉事務署既不在網站公開的pdf檔案變成csv檔案既階段，但見整咗用得個啲諗住share 下俾人。仲未完成所有整理。
+本儲存庫包含與香港選舉相關的數據，這些數據由 PDF 文件（源自選舉事務處）轉換為機器可讀格式（CSV/Excel）。
 
-還在自學數據處理的階段，故此有什麼錯誤請多多包涵!
+## Directory Structure / 目錄結構
 
-在這個Repo 最主要有三個唔同既Folder: 
+The data is organized into the following structure:
+數據按以下結構組織：
 
-Hourly VT by PS 即顯示各年份全港各投票站每小時的投票數據
+```
+data/
+├── raw/                                  # Original raw data (PDFs) / 原始數據 (PDF)
+│   ├── 2017_voter_registration/
+│   └── 2018_legislative_council_by_election/
+└── processed/                            # Cleaned data (CSV/Excel) / 已清理數據 (CSV/Excel)
+    ├── polling_stations/                 # Polling station addresses and coordinates / 票站地址及座標
+    ├── voter_registration/               # Voter registration statistics / 選民登記統計
+    │   ├── total/                        # Total registered voters / 登記選民總數
+    │   └── new/                          # New voter registrations / 新增選民登記
+    └── voter_turnout/                    # Voter turnout statistics / 投票率統計
+        ├── hourly/                       # Hourly turnout by polling station / 各票站每小時投票率
+        └── demographics/                 # Turnout by age group and gender / 按年齡組別及性別劃分的投票率
+```
 
-Polling Station Info 即有最近兩年選舉各票站資料，例如票站地址及其經緯道，票站獲分派多少選民等等。
+## Data Descriptions / 數據說明
 
-VT by Age Group and Gender by PS 即是各年份各投票站己投票人士的年齡層分佈。
+### Voter Turnout (`data/processed/voter_turnout/`) / 投票率
+- **Hourly**: Hourly voter turnout statistics for each polling station across various years.
+  **每小時**: 各年份各票站每小時的投票數據。
+- **Demographics**: Voter turnout demographics broken down by age group and gender for each polling station.
+  **人口統計**: 各票站按年齡組別及性別劃分的投票人數。
 
-Voter Registration by Group and Gender (xlsx) 即是各年選區各年齡層在2011年至2017年選民登記人數。(注意: 2011年-2014年及2015年-2017年選區劃界是有所不同)
+### Polling Stations (`data/processed/polling_stations/`) / 票站資料
+Details for polling stations from recent elections, including addresses, geographical coordinates, and the number of assigned voters.
+最近選舉各票站的詳細資料，包括地址、經緯度及獲分配的選民人數。
 
-New Voter Registration by Group and Gender (xlsx) 即是各年選區各年齡層在2011年至2017年在該年選民新增登記人數。(注意: 2011年-2014年及2015年-2017年選區劃界是有所不同)
+### Voter Registration (`data/processed/voter_registration/`) / 選民登記
+- **Total**: Voter registration figures by constituency and age group (2011-2017).
+  **總數**: 2011年至2017年各選區按年齡組別劃分的選民登記人數。
+- **New**: Statistics on *newly* registered voters by constituency and age group (2011-2017).
+  **新增**: 2011年至2017年各選區按年齡組別劃分的新增選民登記人數。
+
+*Note: Constituency boundaries may differ between 2011-2014 and 2015-2017.*
+*注意：2011-2014年與2015-2017年的選區分界可能有所不同。*
+
+## Disclaimer / 免責聲明
+This data is being processed by a learner. Please report any errors or issues.
+此數據由學習者處理。如有任何錯誤或問題，請回報。
